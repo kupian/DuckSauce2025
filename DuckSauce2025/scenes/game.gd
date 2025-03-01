@@ -7,9 +7,11 @@ var time = Period.PRESENT :
 		if time == Period.PRESENT:
 			remove_child(past)
 			add_child(present)
+			%CanvasModulate.color = Color("4566a0")
 		else:
 			remove_child(present)
 			add_child(past)
+			%CanvasModulate.color = Color("8e5741")
 			
 var past : Node2D
 var present : Node2D
@@ -18,6 +20,7 @@ var present : Node2D
 func _ready():
 	past = %Past
 	present = %Present
+	%CanvasModulate.color = Color("4566a0")
 	remove_child(past)
 
 
