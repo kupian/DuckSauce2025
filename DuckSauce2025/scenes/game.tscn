@@ -1,0 +1,22 @@
+[gd_scene load_steps=3 format=3 uid="uid://dgod8ytevb5lf"]
+
+[ext_resource type="PackedScene" uid="uid://dukkf27fubrtj" path="res://scenes/player.tscn" id="1_oqukh"]
+[ext_resource type="PackedScene" uid="uid://b3kpxernyqlf6" path="res://scenes/obstacle.tscn" id="2_1qhwa"]
+
+[node name="Game" type="Node2D"]
+
+[node name="Player" parent="." instance=ExtResource("1_oqukh")]
+position = Vector2(417, 288)
+
+[node name="Camera2D" type="Camera2D" parent="Player"]
+position = Vector2(0, 20)
+position_smoothing_enabled = true
+
+[node name="Node2D" parent="." instance=ExtResource("2_1qhwa")]
+position = Vector2(414, 486)
+
+[node name="Node2D2" parent="." instance=ExtResource("2_1qhwa")]
+position = Vector2(485, 486)
+
+[node name="Node2D3" parent="." instance=ExtResource("2_1qhwa")]
+position = Vector2(343, 486)
