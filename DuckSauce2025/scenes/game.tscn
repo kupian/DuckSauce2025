@@ -1,11 +1,12 @@
-[gd_scene load_steps=9 format=3 uid="uid://dgod8ytevb5lf"]
+[gd_scene load_steps=10 format=3 uid="uid://dgod8ytevb5lf"]
 
 [ext_resource type="Script" path="res://scenes/game.gd" id="1_4xox8"]
 [ext_resource type="PackedScene" uid="uid://dukkf27fubrtj" path="res://scenes/player.tscn" id="1_oqukh"]
 [ext_resource type="Texture2D" uid="uid://v5rpxg6c8mby" path="res://assets/2d_lights_and_shadows_neutral_point_light.webp" id="3_5fpx6"]
 [ext_resource type="PackedScene" uid="uid://bvdxnkno4arb5" path="res://scene/tile_map.tscn" id="3_eerrx"]
-[ext_resource type="PackedScene" uid="uid://cli7kh5fx5ukp" path="res://scenes/door.tscn" id="4_fyqtv"]
-[ext_resource type="PackedScene" uid="uid://c4p6hmu68i8rp" path="res://scenes/pressure_pad.tscn" id="4_v6vby"]
+[ext_resource type="PackedScene" path="res://scenes/door.tscn" id="4_fyqtv"]
+[ext_resource type="PackedScene" path="res://scenes/pressure_pad.tscn" id="4_v6vby"]
+[ext_resource type="PackedScene" uid="uid://dp1taboip2x2a" path="res://scenes/shield_enemy.tscn" id="7_vqq4t"]
 
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_g1pya"]
 normal = Vector2(0.999906, 0.0136973)
@@ -58,6 +59,10 @@ shape = SubResource("WorldBoundaryShape2D_d54hg")
 
 [node name="CanvasModulate" type="CanvasModulate" parent="."]
 color = Color(0.402952, 0.378026, 0.537361, 1)
+
+[node name="ShieldEnemy" parent="." node_paths=PackedStringArray("player") instance=ExtResource("7_vqq4t")]
+position = Vector2(1077, -40)
+player = NodePath("../Player")
 
 [connection signal="body_entered" from="Constant/PressurePad" to="Constant/Door" method="open"]
 [connection signal="body_exited" from="Constant/PressurePad" to="Constant/Door" method="_on_pressure_pad_body_exited"]

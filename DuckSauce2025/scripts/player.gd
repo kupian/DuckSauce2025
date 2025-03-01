@@ -5,6 +5,17 @@ const SPEED = 300.0
 const JUMP_VELOCITY = -600.0
 const DASH_SPEED = 5000.0
 
+var player_health = 100
+
+
+func die():
+	$AnimatedSprite2D.play("idle")
+	CollisionShape2D.disabled=true   #causes player to fall through map
+	
+func take_damage(amount: int) -> void:
+	player_health -=amount
+	if player_health<=0:
+		die()
 
 func _physics_process(delta):
 	# Add the gravity.
