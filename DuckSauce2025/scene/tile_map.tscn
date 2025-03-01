@@ -191,7 +191,7 @@ physics_layer_0/collision_layer = 1
 sources/6 = SubResource("TileSetAtlasSource_v2bna")
 sources/8 = SubResource("TileSetScenesCollectionSource_84vn5")
 
-[node name="TileMap" type="TileMap"]
+[node name="LevelOne" type="TileMap"]
 tile_set = SubResource("TileSet_wrfei")
 format = 2
 layer_0/name = "background"
