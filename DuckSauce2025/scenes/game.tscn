@@ -1,0 +1,49 @@
+[gd_scene load_steps=3 format=3 uid="uid://dgod8ytevb5lf"]
+
+[ext_resource type="PackedScene" uid="uid://dukkf27fubrtj" path="res://scenes/player.tscn" id="1_oqukh"]
+[ext_resource type="PackedScene" uid="uid://b3kpxernyqlf6" path="res://scenes/obstacle.tscn" id="2_1qhwa"]
+
+[node name="Game" type="Node2D"]
+
+[node name="Player" parent="." instance=ExtResource("1_oqukh")]
+position = Vector2(417, 288)
+
+[node name="Camera2D" type="Camera2D" parent="Player"]
+position = Vector2(0, 20)
+position_smoothing_enabled = true
+
+[node name="Node2D" parent="." instance=ExtResource("2_1qhwa")]
+position = Vector2(414, 486)
+
+[node name="Node2D2" parent="." instance=ExtResource("2_1qhwa")]
+position = Vector2(485, 486)
+
+[node name="Node2D3" parent="." instance=ExtResource("2_1qhwa")]
+position = Vector2(343, 486)
+
+[node name="Node2D4" parent="." instance=ExtResource("2_1qhwa")]
+position = Vector2(630, 483)
+
+[node name="Node2D5" parent="." instance=ExtResource("2_1qhwa")]
+position = Vector2(701, 483)
+
+[node name="Node2D6" parent="." instance=ExtResource("2_1qhwa")]
+position = Vector2(559, 483)
+
+[node name="Node2D7" parent="." instance=ExtResource("2_1qhwa")]
+position = Vector2(846, 483)
+
+[node name="Node2D8" parent="." instance=ExtResource("2_1qhwa")]
+position = Vector2(917, 483)
+
+[node name="Node2D9" parent="." instance=ExtResource("2_1qhwa")]
+position = Vector2(775, 483)
+
+[node name="Node2D10" parent="." instance=ExtResource("2_1qhwa")]
+position = Vector2(197, 483)
+
+[node name="Node2D11" parent="." instance=ExtResource("2_1qhwa")]
+position = Vector2(268, 483)
+
+[node name="Node2D12" parent="." instance=ExtResource("2_1qhwa")]
+position = Vector2(126, 483)
