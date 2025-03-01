@@ -178,7 +178,7 @@ animations = [{
 radius = 5.0
 height = 22.0
 
-[node name="Player" type="CharacterBody2D"]
+[node name="Player" type="CharacterBody2D" groups=["Characters"]]
 scale = Vector2(5, 5)
 script = ExtResource("1_japwr")
 
@@ -187,7 +187,7 @@ sprite_frames = SubResource("SpriteFrames_o5tao")
 animation = &"dash"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(-1, 21)
+position = Vector2(2.2, 21.6)
 shape = SubResource("CapsuleShape2D_khynx")
 
 [node name="Cooldown" type="Timer" parent="."]
